@@ -61,7 +61,7 @@ let upgrades = 1
 let upgrade_cost = upgrades * 10 **2
 
 function upgrading () {
-    if (cookies > upgrade_cost) {
+    if (cookies >= upgrade_cost) {
         
         upgrades = upgrades + 1;
         cookies = cookies - upgrade_cost;
