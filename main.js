@@ -54,6 +54,35 @@ function roll_d6() {
 
 // TASK PART 5
 
+let cookies = 0
+
+let upgrades = 1
+
+let upgrade_cost = upgrades * 10 **2
+
+function upgrading () {
+    if (cookies > upgrade_cost) {
+        
+        upgrades = upgrades + 1;
+        cookies = cookies - upgrade_cost;
+        console.log(`you know earn ${upgrades} cookies per click`);
+        upgrade_cost = (upgrades * 10) **2
+        document.getElementById("amountofcookies").innerHTML = `cookies = ${cookies} `;
+        document.getElementById("upgrade_button").innerHTML = `cost per upgrade: ${upgrade_cost}`;
+    }   else { 
+
+        console.log(`you do not have enough cookies for this upgrade`);
+    }
+}
+function cookie_game() {
+    console.clear()
+    cookies = cookies + 1 * upgrades; 
+    console.log(`you have ${cookies} cookies`);
+    document.getElementById("amountofcookies").innerHTML = `cookies = ${cookies} `;
+    document.getElementById("upgrade_button").innerHTML = `cost per upgrade: ${upgrade_cost}`;
+    upgrade_cost = (upgrades * 10) **2
+}
+
 function guessinggame() {
 
     game = true
@@ -70,10 +99,15 @@ function guessinggame() {
         }   else if (user_guess < mystery_number) {
             console.log(`the random number is higher`)
 
+
         }   else if (user_guess = mystery_number) {
             console.log(`Correct the random number was ${mystery_number}`)
             game = false
         }
+
+
     }
 }
+
+
 
