@@ -77,7 +77,6 @@ function upgrading () {
 function cookie_game() {
     console.clear()
     cookies = cookies + 1 * upgrades; 
-    console.log(`you have ${cookies} cookies`);
     document.getElementById("amountofcookies").innerHTML = `cookies = ${cookies} `;
     document.getElementById("upgrade_button").innerHTML = `cost per upgrade: ${upgrade_cost}`;
     upgrade_cost = (upgrades * 10) **2
